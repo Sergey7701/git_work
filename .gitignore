@@ -1,0 +1,4 @@
+*.lock
+vendor/*
+nbproject/*
+/src/PrintString.php

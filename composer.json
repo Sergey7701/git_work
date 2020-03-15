@@ -1,0 +1,18 @@
+{
+    "name": "skillbox/jumping_letters",
+    "authors": [
+        {
+            "name": "Sergey",
+            "email": "sergey@example.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^5.0",
+        "nesbot/carbon": "^2.29"
+    },
+    "autoload": {
+        "psr-4": {
+              "App\\": ["src"]
+        }
+    }
+}
