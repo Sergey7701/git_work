@@ -9,7 +9,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 
-class DevMethod extends Command
+
+class SayHello extends Command
 {
 
     // the name of the command (the part after "bin/console")
@@ -17,12 +18,14 @@ class DevMethod extends Command
 
     protected function configure()
     {
-        $this->setname('dev command');
+          $this->setname('say_hello')
+              ->addArgument('name', InputArgument::REQUIRED, 'Who do you want to greet?');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('dev command');
+        $name = $input->getArgument('name');
+        $output->writeln("Привет $name");
         return 0;
     }
 }
